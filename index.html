@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrandFans – Das OnlyFans von GrandRP</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="age-gate">
+  <div class="abox">
+    <img src="grandfans.png" alt="GrandFans" class="alogo" onerror="this.style.display='none'">
+    <div class="apill">🔞 Nur für Erwachsene</div>
+    <h2>Willkommen bei GrandFans</h2>
+    <p class="adesc">
+      <strong>GrandFans ist das OnlyFans von GrandRP.</strong><br><br>
+      Exklusiver Creator-Content mit Einmalzahlung pro Inhalt –
+      alles innerhalb von GrandRP. Kein öffentliches Profil, kein Account.
+      Du meldest dich direkt <strong>In-Character (IC)</strong> bei uns.<br><br>
+      Diese Seite ist ausschließlich für Personen ab <strong>18 Jahren</strong>.
+    </p>
+    <div class="abts">
+      <button class="ayes" onclick="enterSite()">Ja, ich bin 18+ &nbsp;✓</button>
+      <button class="ano" onclick="denyAccess()">Nein, ich bin jünger</button>
+    </div>
+    <p class="awarn">Mit dem Betreten bestätigst du, mindestens 18 Jahre alt zu sein und unsere Nutzungsbedingungen zu akzeptieren.</p>
+  </div>
+</div>
+
+<div id="popup-overlay" onclick="closePopupOutside(event)">
+  <div class="popup-box" id="popup-box">
+    <div class="popup-head">
+      <div class="popup-title" id="popup-title"></div>
+      <button class="popup-close" onclick="closePopup()">✕</button>
+    </div>
+    <div class="popup-body" id="popup-body"></div>
+  </div>
+</div>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<nav>
+  <div class="logo-wrap">
+    <img src="grandfans.png" alt="GrandFans" class="logo" onerror="this.style.display='none'">
+    <div class="video-popup">
+      <video src="grandspice.mp4" autoplay muted loop playsinline></video>
+      <div class="vlabel">GrandSpice</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><button onclick="openPopup('how')">So funktioniert's</button></li>
+    <li><button onclick="openPopup('leistungen')">Leistungen</button></li>
+    <li><button onclick="openPopup('kontakt')">Kontakt</button></li>
+  </ul>
+  <button class="nav-cta" onclick="openPopup('kontakt')">IC melden</button>
+</nav>
+
+<div class="hero">
+  <div class="badge">Das OnlyFans von GrandRP — GrandFans</div>
+  <h1>Exklusiver Content<br><span class="gr">nur auf GrandRP</span></h1>
+  <p class="hsub">GrandFans ist die erste exklusive Content-Plattform auf GrandRP. Kein öffentliches Profil – du meldest dich direkt In-Character bei Anatoly Federov und wirst als Creator aufgenommen.</p>
+  <div class="hbtns">
+    <button class="btnp" onclick="openPopup('kontakt')">Jetzt IC melden</button>
+    <button class="btng" onclick="openPopup('how')">So funktioniert's</button>
+  </div>
+</div>
+
+<div class="ic-banner">
+  <div class="ic-inner">
+    <div class="ico">📋</div>
+    <p>
+      <strong>Keine öffentlichen Profile.</strong> GrandFans funktioniert ausschließlich In-Character auf GrandRP.
+      Melde dich direkt bei <span>Anatoly Federov</span> unter <span>67-57-875</span> — Einmalzahlung pro Content.
+    </p>
+  </div>
+</div>
+
+<div class="ticker">
+  <div class="ttrack">
+    <span>GrandFans</span><span class="a">✦</span>
+    <span>Exklusiver Content</span><span class="a">✦</span>
+    <span>GrandRP OnlyFans</span><span class="a">✦</span>
+    <span>IC melden</span><span class="a">✦</span>
+    <span>Einmalzahlung</span><span class="a">✦</span>
+    <span>Premium Inhalte</span><span class="a">✦</span>
+    <span>Nur auf GrandRP</span><span class="a">✦</span>
+    <span>GrandFans</span><span class="a">✦</span>
+    <span>Exklusiver Content</span><span class="a">✦</span>
+    <span>GrandRP OnlyFans</span><span class="a">✦</span>
+    <span>IC melden</span><span class="a">✦</span>
+    <span>Einmalzahlung</span><span class="a">✦</span>
+    <span>Premium Inhalte</span><span class="a">✦</span>
+    <span>Nur auf GrandRP</span><span class="a">✦</span>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="sc"><div class="sn">[]</div><div class="sl">Aktive Creator</div></div>
+  <div class="sc"><div class="sn">[]</div><div class="sl">Käufer</div></div>
+  <div class="sc"><div class="sn">#1</div><div class="sl">Auf GrandRP</div></div>
+  <div class="sc"><div class="sn">24/7</div><div class="sl">Neuer Content</div></div>
+</div>
+
+<div class="div"></div>
+
+<div class="tabs-section">
+
+  <div class="tabs-header">
+    <button class="tab-btn active" onclick="switchTab('creator', this)">
+      <span class="ticon">🎬</span> Ich will Creator werden
+    </button>
+    <button class="tab-btn" onclick="switchTab('pleasure', this)">
+      <span class="ticon">💎</span> Ich will Pleasure haben
+    </button>
+  </div>
+
+  <div class="tab-content active" id="tab-creator">
+    <div class="tab-grid">
+      <div class="tab-card">
+        <div class="tab-card-ico">📞</div>
+        <h3>IC melden</h3>
+        <p>Ruf Anatoly Federov unter <strong style="color:#4ca3e8">67-57-875</strong> an oder finde ihn auf GrandRP. Alles läuft In-Character, kein Formular nötig.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🤝</div>
+        <h3>Vereinbarung treffen</h3>
+        <p>Wir besprechen IC deinen Content-Typ, deine Preise pro Inhalt und alles weitere – individuell und diskret.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🔒</div>
+        <h3>Content sperren</h3>
+        <p>Dein Content geht hinter die Paywall. Nur Käufer die einmalig zahlen erhalten Zugang zu deinen Inhalten.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">📈</div>
+        <h3>Wir vermarkten dich</h3>
+        <p>GrandFans bewirbt dich aktiv auf GrandRP – mehr Käufer, mehr Reichweite, mehr Einnahmen für dich.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🎨</div>
+        <h3>Profil-Branding</h3>
+        <p>Wir gestalten dein Erscheinungsbild auf GrandFans professionell – für maximale Attraktivität bei Käufern.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🛡️</div>
+        <h3>Volle Diskretion</h3>
+        <p>Alles bleibt IC und vertraulich. Deine Identität, dein Content, deine Konditionen – du behältst die Kontrolle.</p>
+      </div>
+    </div>
+
+    <div class="split-box">
+      <div class="split-half">
+        <div class="split-pct">50%</div>
+        <div class="split-label">⬆ Gehen an dich</div>
+      </div>
+      <div style="padding:0 16px;font-size:14px;color:rgba(255,255,255,.25);white-space:nowrap;">50 / 50<br>System</div>
+      <div class="split-half">
+        <div class="split-pct">50%</div>
+        <div class="split-label">⬆ Gehen an GrandFans</div>
+      </div>
+    </div>
+
+    <div class="tab-cta-row">
+      <button class="btnp" style="font-size:16px;padding:15px 38px;" onclick="openPopup('kontakt')">🎬 Jetzt als Creator melden</button>
+      <button class="btng" style="font-size:16px;padding:15px 38px;" onclick="openPopup('how')">So funktioniert's</button>
+    </div>
+  </div>
+
+  <div class="tab-content" id="tab-pleasure">
+    <div class="tab-grid">
+      <div class="tab-card">
+        <div class="tab-card-ico">💎</div>
+        <h3>Exklusiver Content</h3>
+        <p>Kaufe gesperrte Premium-Inhalte von GrandFans Creatorn direkt auf GrandRP – Fotos, Videos, Stories.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">💳</div>
+        <h3>Nur Einmalzahlung</h3>
+        <p>Kein Abo, kein Vertrag. Du zahlst einmalig mit GrandRP In-Game-Währung für genau den Inhalt den du willst.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🔐</div>
+        <h3>Sofortiger Zugang</h3>
+        <p>Nach der Zahlung erhältst du sofort Zugang zu deinem gekauften Content – direkt In-Character auf GrandRP.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🌟</div>
+        <h3>Top Creator</h3>
+        <p>Entdecke die besten Creator auf GrandRP. Frag Anatoly Federov IC nach dem aktuellen Creator-Lineup.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🛡️</div>
+        <h3>Diskret & Sicher</h3>
+        <p>Alle Transaktionen laufen diskret In-Character. Deine Privatsphäre wird vollständig gewahrt.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">📞</div>
+        <h3>IC anfragen</h3>
+        <p>Melde dich bei Anatoly Federov unter <strong style="color:#4ca3e8">67-57-875</strong> und frag nach verfügbarem Content.</p>
+      </div>
+    </div>
+
+    <div style="padding:20px 24px;border-radius:16px;background:linear-gradient(135deg,rgba(76,163,232,.08),rgba(108,59,219,.08));border:1px solid rgba(76,163,232,.18);text-align:center;margin-bottom:24px;">
+      <div style="font-size:13px;color:rgba(255,255,255,.45);line-height:1.7;">
+        💡 <strong style="color:#fff;">So läuft's ab:</strong> Melde dich IC bei Anatoly · Frag nach verfügbarem Content · Zahle einmalig · Erhalte sofort Zugang
+      </div>
+    </div>
+
+    <div class="tab-cta-row">
+      <button class="btnp" style="font-size:16px;padding:15px 38px;" onclick="openPopup('kontakt')">💎 Jetzt Content kaufen</button>
+      <button class="btng" style="font-size:16px;padding:15px 38px;" onclick="openPopup('leistungen')">Alle Leistungen</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="ctasec">
+  <div class="ctacard">
+    <h2>Bereit für <span class="g2">GrandFans</span>?</h2>
+    <p>Das OnlyFans von GrandRP. Melde dich In-Character bei Anatoly Federov.</p>
+    <button class="btnp" style="font-size:17px;padding:17px 44px;" onclick="openPopup('kontakt')">📞 Jetzt IC melden</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 <span>GrandFans</span> – Das exklusive Creator-Netzwerk auf GrandRP · Anatoly Federov · <span>67-57-875</span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
