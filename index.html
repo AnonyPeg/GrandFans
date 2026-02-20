@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrandFans – Das OnlyFans von GrandRP</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="age-gate">
+  <div class="abox">
+    <img src="grandfans.png" alt="GrandFans" class="alogo" onerror="this.style.display='none'">
+    <div class="apill">🔞 Nur für Erwachsene</div>
+    <h2>Willkommen bei GrandFans</h2>
+    <p class="adesc">
+      <strong>GrandFans ist das OnlyFans von GrandRP.</strong><br><br>
+      Exklusiver Creator-Content mit Einmalzahlung pro Inhalt –
+      alles innerhalb von GrandRP. Kein öffentliches Profil, kein Account.
+      Du meldest dich direkt <strong>In-Character (IC)</strong> bei uns.<br><br>
+      Diese Seite ist ausschließlich für Personen ab <strong>18 Jahren</strong>.
+    </p>
+    <div class="abts">
+      <button class="ayes" onclick="enterSite()">Ja, ich bin 18+ &nbsp;✓</button>
+      <button class="ano" onclick="denyAccess()">Nein, ich bin jünger</button>
+    </div>
+    <p class="awarn">Mit dem Betreten bestätigst du, mindestens 18 Jahre alt zu sein und unsere Nutzungsbedingungen zu akzeptieren.</p>
+  </div>
+</div>
+
+<div id="popup-overlay" onclick="closePopupOutside(event)">
+  <div class="popup-box" id="popup-box">
+    <div class="popup-head">
+      <div class="popup-title" id="popup-title"></div>
+      <button class="popup-close" onclick="closePopup()">✕</button>
+    </div>
+    <div class="popup-body" id="popup-body"></div>
+  </div>
+</div>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<nav>
+  <div class="logo-wrap">
+    <img src="grandfans.png" alt="GrandFans" class="logo" onerror="this.style.display='none'">
+    <div class="video-popup">
+      <video src="grandspice.mp4" autoplay muted loop playsinline></video>
+      <div class="vlabel">GrandSpice</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><button onclick="openPopup('how')">So funktioniert's</button></li>
+    <li><button onclick="openPopup('leistungen')">Leistungen</button></li>
+    <li><button onclick="openPopup('kontakt')">Kontakt</button></li>
+  </ul>
+  <a class="nav-cta" href="https://discord.gg/mszX5U6jXW" target="_blank" rel="noopener">Discord beitreten</a>
+</nav>
+
+<div class="hero">
+  <div class="badge">Das OnlyFans von GrandRP — GrandFans</div>
+  <h1>Exklusiver Content<br><span class="gr">nur auf GrandRP</span></h1>
+  <p class="hsub">GrandFans ist die erste exklusive Content-Plattform auf GrandRP. Kein öffentliches Profil – tritt unserem Discord bei und melde dich direkt dort, um als Creator aufgenommen zu werden.</p>
+  <div class="hbtns">
+    <a class="btnp" href="https://discord.gg/mszX5U6jXW" target="_blank" rel="noopener">Discord beitreten</a>
+    <button class="btng" onclick="openPopup('how')">So funktioniert's</button>
+  </div>
+</div>
+
+<div class="ic-banner">
+  <div class="ic-inner">
+    <div class="ico">💬</div>
+    <p>
+      <strong>Alles läuft über Discord.</strong> GrandFans wird ausschließlich über unseren Discord-Server abgewickelt.
+      Tritt jetzt bei und melde dich direkt bei <span>Anatoly Federov</span> — Einmalzahlung pro Content.
+    </p>
+    <a class="discord-banner-btn" href="https://discord.gg/mszX5U6jXW" target="_blank" rel="noopener">Discord beitreten →</a>
+  </div>
+</div>
+
+<div class="ticker">
+  <div class="ttrack">
+    <span>GrandFans</span><span class="a">✦</span>
+    <span>Exklusiver Content</span><span class="a">✦</span>
+    <span>GrandRP OnlyFans</span><span class="a">✦</span>
+    <span>IC melden</span><span class="a">✦</span>
+    <span>Einmalzahlung</span><span class="a">✦</span>
+    <span>Premium Inhalte</span><span class="a">✦</span>
+    <span>Nur auf GrandRP</span><span class="a">✦</span>
+    <span>GrandFans</span><span class="a">✦</span>
+    <span>Exklusiver Content</span><span class="a">✦</span>
+    <span>GrandRP OnlyFans</span><span class="a">✦</span>
+    <span>IC melden</span><span class="a">✦</span>
+    <span>Einmalzahlung</span><span class="a">✦</span>
+    <span>Premium Inhalte</span><span class="a">✦</span>
+    <span>Nur auf GrandRP</span><span class="a">✦</span>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="sc"><div class="sn">[]</div><div class="sl">Aktive Creator</div></div>
+  <div class="sc"><div class="sn">[]</div><div class="sl">Käufer</div></div>
+  <div class="sc"><div class="sn">#1</div><div class="sl">Auf GrandRP</div></div>
+  <div class="sc"><div class="sn">24/7</div><div class="sl">Neuer Content</div></div>
+</div>
+
+<div class="div"></div>
+
+<div class="tabs-section">
+
+  <div class="tabs-header">
+    <button class="tab-btn active" onclick="switchTab('creator', this)">
+      <span class="ticon">🎬</span> Ich will Creator werden
+    </button>
+    <button class="tab-btn" onclick="switchTab('pleasure', this)">
+      <span class="ticon">💎</span> Ich will Pleasure haben
+    </button>
+  </div>
+
+  <div class="tab-content active" id="tab-creator">
+    <div class="tab-grid">
+      <div class="tab-card">
+        <div class="tab-card-ico">💬</div>
+        <h3>Discord beitreten</h3>
+        <p>Tritt unserem <strong style="color:#5865f2">Discord-Server</strong> bei und melde dich direkt dort bei Anatoly Federov. Alles wird über Discord abgewickelt.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🤝</div>
+        <h3>Vereinbarung treffen</h3>
+        <p>Wir besprechen IC deinen Content-Typ, deine Preise pro Inhalt und alles weitere – individuell und diskret.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🔒</div>
+        <h3>Content sperren</h3>
+        <p>Dein Content geht hinter die Paywall. Nur Käufer die einmalig zahlen erhalten Zugang zu deinen Inhalten.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">📈</div>
+        <h3>Wir vermarkten dich</h3>
+        <p>GrandFans bewirbt dich aktiv auf GrandRP – mehr Käufer, mehr Reichweite, mehr Einnahmen für dich.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🎨</div>
+        <h3>Profil-Branding</h3>
+        <p>Wir gestalten dein Erscheinungsbild auf GrandFans professionell – für maximale Attraktivität bei Käufern.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🛡️</div>
+        <h3>Volle Diskretion</h3>
+        <p>Alles bleibt IC und vertraulich. Deine Identität, dein Content, deine Konditionen – du behältst die Kontrolle.</p>
+      </div>
+    </div>
+
+    <div class="split-box">
+      <div class="split-half">
+        <div class="split-pct">50%</div>
+        <div class="split-label">⬆ Gehen an dich</div>
+      </div>
+      <div style="padding:0 16px;font-size:14px;color:rgba(255,255,255,.25);white-space:nowrap;">50 / 50<br>System</div>
+      <div class="split-half">
+        <div class="split-pct">50%</div>
+        <div class="split-label">⬆ Gehen an GrandFans</div>
+      </div>
+    </div>
+
+    <div class="tab-cta-row">
+      <a class="btnp discord-btn" style="font-size:16px;padding:15px 38px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;" href="https://discord.gg/mszX5U6jXW" target="_blank" rel="noopener">🎬 Jetzt als Creator melden</a>
+      <button class="btng" style="font-size:16px;padding:15px 38px;" onclick="openPopup('how')">So funktioniert's</button>
+    </div>
+  </div>
+
+  <div class="tab-content" id="tab-pleasure">
+    <div class="tab-grid">
+      <div class="tab-card">
+        <div class="tab-card-ico">💎</div>
+        <h3>Exklusiver Content</h3>
+        <p>Kaufe gesperrte Premium-Inhalte von GrandFans Creatorn direkt auf GrandRP – Fotos, Videos, Stories.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">💳</div>
+        <h3>Nur Einmalzahlung</h3>
+        <p>Kein Abo, kein Vertrag. Du zahlst einmalig mit GrandRP In-Game-Währung für genau den Inhalt den du willst.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🔐</div>
+        <h3>Sofortiger Zugang</h3>
+        <p>Nach der Zahlung erhältst du sofort Zugang zu deinem gekauften Content – direkt In-Character auf GrandRP.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🌟</div>
+        <h3>Top Creator</h3>
+        <p>Entdecke die besten Creator auf GrandRP. Frag Anatoly Federov IC nach dem aktuellen Creator-Lineup.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">🛡️</div>
+        <h3>Diskret & Sicher</h3>
+        <p>Alle Transaktionen laufen diskret In-Character. Deine Privatsphäre wird vollständig gewahrt.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-card-ico">💬</div>
+        <h3>Discord anfragen</h3>
+        <p>Tritt unserem <strong style="color:#5865f2">Discord-Server</strong> bei und frag dort nach verfügbarem Content von unseren Creatorn.</p>
+      </div>
+    </div>
+
+    <div style="padding:20px 24px;border-radius:16px;background:linear-gradient(135deg,rgba(88,101,242,.12),rgba(108,59,219,.12));border:1px solid rgba(88,101,242,.3);text-align:center;margin-bottom:24px;">
+      <div style="font-size:13px;color:rgba(255,255,255,.45);line-height:1.7;">
+        💡 <strong style="color:#fff;">So läuft's ab:</strong> Discord beitreten · Anatoly kontaktieren · Frag nach verfügbarem Content · Zahle einmalig · Erhalte sofort Zugang
+      </div>
+    </div>
+
+    <div class="tab-cta-row">
+      <a class="btnp discord-btn" style="font-size:16px;padding:15px 38px;text-decoration:none;display:inline-flex;align-items:center;gap:10px;" href="https://discord.gg/mszX5U6jXW" target="_blank" rel="noopener">💎 Jetzt Content kaufen</a>
+      <button class="btng" style="font-size:16px;padding:15px 38px;" onclick="openPopup('leistungen')">Alle Leistungen</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="ctasec">
+  <div class="ctacard">
+    <h2>Bereit für <span class="g2">GrandFans</span>?</h2>
+    <p>Das OnlyFans von GrandRP. Alles wird über unseren Discord abgewickelt.</p>
+    <a class="btnp discord-btn" style="font-size:17px;padding:17px 44px;text-decoration:none;display:inline-flex;align-items:center;gap:12px;" href="https://discord.gg/mszX5U6jXW" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026c.462-.62.874-1.275 1.226-1.963.021-.04.001-.088-.041-.104a13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028z"/></svg>
+      Discord beitreten
+    </a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 <span>GrandFans</span> – Das exklusive Creator-Netzwerk auf GrandRP · <a href="https://discord.gg/mszX5U6jXW" target="_blank" rel="noopener" style="color:#5865f2;text-decoration:none;font-weight:700;">Discord beitreten</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
